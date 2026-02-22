@@ -7,4 +7,4 @@ require 'env.php';
 
 use App\Storage;
 
-Storage::resolve('s3')->put('test5.txt', 'nihaoma');
+Storage::resolve('local')->put('test5.txt', 'nihaoma');
