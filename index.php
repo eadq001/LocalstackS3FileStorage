@@ -2,13 +2,9 @@
 
 declare(strict_types=1);
 require 'vendor/autoload.php';
-
-use App\LocalStorage;
-use App\S3Storage;
+require 'env.php';
 
 
-$local = new LocalStorage();
-$local->put('test.txt', 'nihaoma');
+use App\Storage;
 
-$s3 = new S3Storage();
-$s3->put('test3.txt', 'nihaoma');gh
+Storage::resolve('s3')->put('test5.txt', 'nihaoma');

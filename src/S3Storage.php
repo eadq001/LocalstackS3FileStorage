@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App;
 
 require 'vendor/autoload.php';
-require 'env.php';
 
 
 use App\FileStorage;
@@ -20,6 +19,7 @@ use Aws\S3\Exception\S3Exception;
 
 class S3Storage implements FileStorage
 {
+    // public function __construct(protected S3Client $s3Client) {}
     public function put(string $filename, string $content)
     {
 
@@ -37,7 +37,6 @@ class S3Storage implements FileStorage
         // $s3->createBucket([
         //     'Bucket' => 'oop',
         // ]);
-
 
         try {
             $s3->putObject([
