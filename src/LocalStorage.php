@@ -14,11 +14,11 @@ class LocalStorage implements FileStorage
             echo 'file already exist, please choose another filename.\n';
             return;
         }
-        if (!file_exists($root . '/' . $filename)) {
+        else {
             mkdir(dirname($root . '/' . $filename), 0777, true);
         }
         
         file_put_contents($root . '/' . $filename, $content);
-        echo "local file successfully uploaded\n";
+        echo "local file successfully uploaded";
     }
 }

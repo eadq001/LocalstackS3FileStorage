@@ -11,15 +11,9 @@ use App\FileStorage;
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
-// $root = 'storage';
-// $file = 'one/two/three/test.txt';
-// $contents = 'Hello World';
-// $savePath = "{$root}/{$file}";
-
 
 class S3Storage implements FileStorage
 {
-    // public function __construct(protected S3Client $s3Client) {}
     public function put(string $filename, string $content)
     {
 
